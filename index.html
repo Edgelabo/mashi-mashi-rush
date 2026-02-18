@@ -1,24 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>マシマシRUSH!!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Dots&display=swap" rel="stylesheet">
+    <meta name="description" content="某ラーメン屋のコールをマスターせよ！" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mashi-mashi-rush.atoz-works.com" />
+    <meta property="og:title" content="マシマシRUSH!!" />
+    <meta property="og:description" content="某ラーメン屋のコールをマスターせよ！" />
+    <meta property="og:image" content="https://mashi-mashi-rush.atoz-works.com/ogp.png" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="マシマシRUSH!!" />
+    <meta name="twitter:description" content="某ラーメン屋のコールをマスターせよ！" />
+    <meta name="twitter:image" content="https://mashi-mashi-rush.atoz-works.com/ogp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Dots&display=swap"
+      rel="stylesheet" />
     <style>
-      .screen { opacity: 0; }
-      .screen.active { opacity: 1; }
+      .screen {
+        opacity: 0;
+      }
+      .screen.active {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
     <div id="app">
       <!-- Start Screen -->
       <div id="start-screen" class="screen active">
-        <h1 class="title">マシマシ<br><span class="rush">RUSH!!</span></h1>
-        <img src="/ramen.webp" class="ramen-img" alt="ラーメン" width="300" height="300" />
+        <h1 class="title">マシマシ<br /><span class="rush">RUSH!!</span></h1>
+        <img
+          src="/ramen.webp"
+          class="ramen-img"
+          alt="ラーメン"
+          width="300"
+          height="300" />
         <button id="start-btn" class="btn primary">スタート</button>
         <button id="howto-btn" class="btn secondary">遊び方</button>
       </div>
@@ -30,7 +58,9 @@
           <p>お客さんの注文を読んで、正しいトッピングを選んで提供しよう！</p>
           <div class="howto-section">
             <h3>ヤサイ</h3>
-            <p class="howto-rule">「なし」と言われない限り必ず●○○以上入れること！</p>
+            <p class="howto-rule">
+              「なし」と言われない限り必ず●○○以上入れること！
+            </p>
             <ul>
               <li>何も言わない / 「ヤサイ」→ ●○○</li>
               <li>「ヤサイマシ」→ ●●○</li>
@@ -66,7 +96,7 @@
           <div class="timer-box">残り時間: <span id="timer">60</span></div>
           <div class="score-box">提供数: <span id="score">0</span>杯</div>
         </div>
-        
+
         <div class="customer-area">
           <div id="call-bubble" class="call-bubble">ニンニク入れますか？</div>
           <div id="customer-img" class="customer-placeholder"></div>
@@ -113,8 +143,8 @@
           <button id="retry-btn" class="btn primary">もう一度</button>
         </div>
       </div>
-
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
