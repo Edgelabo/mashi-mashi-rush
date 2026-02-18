@@ -271,7 +271,7 @@ h1.title {
 
 /* How To */
 .howto-title {
-  font-family: var(--font-display);
+  font-family: var(--font-main);
   color: var(--color-primary);
   margin-bottom: 10px;
 }
