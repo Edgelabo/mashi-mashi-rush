@@ -27,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  height: 100dvh;
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(245, 197, 66, 0.1) 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, rgba(255, 71, 87, 0.1) 0%, transparent 20%);
