@@ -104,7 +104,7 @@ export class Game {
     this.resetInput();
     this.ui.callBubble.textContent = this.currentOrder.text;
     const n = Math.floor(Math.random() * 5) + 1;
-    this.ui.customerImg.style.backgroundImage = `url('/customer_${n}.png')`;
+    this.ui.customerImg.style.backgroundImage = `url('/customer_${n}.webp')`;
   }
 
   resetInput() {
@@ -258,7 +258,7 @@ export class Game {
       const ramenImg = new Image();
       ramenImg.onload = () => document.fonts.ready.then(() => draw(ramenImg));
       ramenImg.onerror = () => document.fonts.ready.then(() => draw(null));
-      ramenImg.src = '/ramen.png';
+      ramenImg.src = '/ramen.webp';
     });
   }
 }
