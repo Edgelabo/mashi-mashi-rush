@@ -14,6 +14,7 @@
   box-sizing: border-box;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 body {
@@ -134,8 +135,15 @@ h1.title {
   color: #fff;
   width: 100%;
   font-size: 1.2rem;
-  margin: 24px auto 0;
-  height: 60px;
+  margin: 16px auto 0;
+  height: 58px;
+}
+
+/* Game Screen Layout */
+#game-screen {
+  justify-content: flex-start;
+  padding: 12px 16px;
+  gap: 6px;
 }
 
 /* Game HUD */
@@ -143,10 +151,8 @@ h1.title {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  position: absolute;
-  top: 20px;
-  padding: 0 20px;
-  font-size: 1.6rem;
+  padding: 0;
+  font-size: 1.2rem;
 }
 
 .customer-area {
@@ -156,19 +162,19 @@ h1.title {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 0;
 }
 
 .call-bubble {
   background: #fff;
   color: #000;
-  padding: 20px;
+  padding: 12px 16px;
   border-radius: 20px;
   position: relative;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-size: 1rem;
   text-align: center;
-  min-height: 80px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,13 +195,12 @@ h1.title {
 }
 
 .customer-placeholder {
-  width: 250px;
-  height: 250px;
-
+  width: min(160px, 38vw);
+  height: min(160px, 38vw);
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  margin: 20px;
+  margin: 8px;
   border: 4px solid #fff;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
@@ -209,8 +214,8 @@ h1.title {
 .topping-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px 10px;
-  margin-bottom: 10px;
+  gap: 16px 12px;
+  margin-bottom: 12px;
 }
 
 .topping-btn {
@@ -222,8 +227,8 @@ h1.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  font-size: 1.2rem;
+  padding: 13px 12px;
+  font-size: 1.1rem;
 }
 
 .topping-btn[data-type="yasai"] { border-bottom: 4px solid var(--color-accent); }
