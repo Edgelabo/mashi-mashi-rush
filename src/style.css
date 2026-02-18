@@ -75,7 +75,7 @@ body {
 
 /* Typography */
 h1.title {
-  font-family: var(--font-display);
+  font-family: var(--font-main);
   font-size: 3rem;
   text-align: center;
   color: var(--color-primary);
@@ -85,6 +85,7 @@ h1.title {
 }
 
 .rush {
+  font-family: var(--font-display);
   color: var(--color-secondary);
   font-size: 4rem;
 }
