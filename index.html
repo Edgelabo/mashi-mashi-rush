@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>マシマシRUSH!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+      .screen { opacity: 0; }
+      .screen.active { opacity: 1; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <h1 class="title">マシマシ<br><span class="rush">RUSH!!</span></h1>
+        <img src="/ramen.png" class="ramen-img" alt="ラーメン" />
+        <button id="start-btn" class="btn primary">スタート</button>
+        <button id="howto-btn" class="btn secondary">遊び方</button>
+      </div>
+
+      <!-- How To Screen -->
+      <div id="howto-screen" class="screen hidden">
+        <h2 class="howto-title">遊び方</h2>
+        <div class="howto-body">
+          <p>お客さんの注文を読んで、正しいトッピングを選んで提供しよう！</p>
+          <div class="howto-section">
+            <h3>ヤサイ</h3>
+            <p class="howto-rule">「なし」と言われない限り必ず●○○以上入れること！</p>
+            <ul>
+              <li>何も言わない / 「ヤサイ」→ ●○○</li>
+              <li>「ヤサイマシ」→ ●●○</li>
+              <li>「ヤサイマシマシ」→ ●●●</li>
+              <li>「ヤサイなし」→ ○○○</li>
+            </ul>
+          </div>
+          <div class="howto-section">
+            <h3>ニンニク・アブラ（デフォルト：なし）</h3>
+            <ul>
+              <li>何も言わない → ○○○</li>
+              <li>「ニンニク」「アブラ」→ ●○○</li>
+              <li>「マシ」→ ●●○</li>
+              <li>「マシマシ」→ ●●●</li>
+            </ul>
+          </div>
+          <div class="howto-section">
+            <h3>特殊注文</h3>
+            <ul>
+              <li>「全マシ」→ 全部2押し</li>
+              <li>「全マシマシ」→ 全部3押し</li>
+              <li>「そのまま」→ ヤサイ1押し・他なし</li>
+            </ul>
+          </div>
+          <p class="howto-note">間違えたら「作り直す」で0に戻せるよ</p>
+        </div>
+        <button id="back-from-howto-btn" class="btn secondary">戻る</button>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen hidden">
+        <div class="hud">
+          <div class="timer-box">残り時間: <span id="timer">60</span></div>
+          <div class="score-box">提供数: <span id="score">0</span>杯</div>
+        </div>
+        
+        <div class="customer-area">
+          <div id="call-bubble" class="call-bubble">ニンニク入れますか？</div>
+          <div id="customer-img" class="customer-placeholder"></div>
+        </div>
+
+        <div class="controls">
+          <div class="topping-grid">
+            <button class="btn topping-btn" data-type="yasai">
+              ヤサイ
+              <span class="dots" id="badge-yasai">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </span>
+            </button>
+            <button class="btn topping-btn" data-type="ninniku">
+              ニンニク
+              <span class="dots" id="badge-ninniku">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </span>
+            </button>
+            <button class="btn topping-btn" data-type="abura">
+              アブラ
+              <span class="dots" id="badge-abura">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </span>
+            </button>
+            <button class="btn delete-btn" id="reset-btn">作り直す</button>
+          </div>
+          <button id="serve-btn" class="btn action-btn">へいお待ち！</button>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="screen hidden">
+        <h2>本日の提供数</h2>
+        <div class="final-score" id="final-score">0杯</div>
+        <div class="result-actions">
+          <button id="share-btn" class="btn share">結果をシェア</button>
+          <button id="retry-btn" class="btn primary">もう一度</button>
+        </div>
+      </div>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
